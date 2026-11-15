@@ -384,6 +384,8 @@ def test_jo_auto_creates_bom_issue_note(isolated_module_dbs, client):
         "/api/production/orders",
         json={
             "jo_date": "2026-05-15",
+            "so_number": "SO-TEST-BOM",
+            "so_source": "manual",
             "sku": "PRINTED-1",
             "sku_name": "Printed shirt",
             "process": "Cutting",
@@ -531,6 +533,8 @@ def test_cutting_issue_note_filters_process_and_skips_foreign_fabric(isolated_mo
         "/api/production/orders",
         json={
             "jo_date": "2026-07-11",
+            "so_number": "SO-TEST-PROC",
+            "so_source": "manual",
             "sku": "1189YKPROC",
             "sku_name": "1189YKPROC",
             "process": "Cutting",

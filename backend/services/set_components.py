@@ -50,6 +50,8 @@ def parse_component_sku(sku: str) -> tuple[str, str] | tuple[None, None]:
         return None, None
     if code in {"XS", "S", "M", "L", "XL", "XXL", "XXXL", "2XL", "3XL", "4XL", "5XL", "6XL", "7XL", "8XL"}:
         return None, None
+    if code.isdigit():
+        return None, None
     return main, code
 
 
